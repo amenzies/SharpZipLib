@@ -65,7 +65,7 @@ namespace ICSharpCode.SharpZipLib.Tar
 	/// defaults and the File is set to null.</p>
 	/// <see cref="TarHeader"/>
 	/// </summary>
-	public class TarEntry : ICloneable
+	public class TarEntry
 	{
 		#region Constructors
 		/// <summary>
@@ -104,7 +104,7 @@ namespace ICSharpCode.SharpZipLib.Tar
 		}
 		#endregion
 
-		#region ICloneable Members
+		#region clone Members
 		/// <summary>
 		/// Clone this tar entry.
 		/// </summary>

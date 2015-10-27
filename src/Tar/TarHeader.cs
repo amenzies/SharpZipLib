@@ -79,7 +79,7 @@ namespace ICSharpCode.SharpZipLib.Tar
 	/// This class encapsulates the Tar Entry Header used in Tar Archives.
 	/// The class also holds a number of tar constants, used mostly in headers.
 	/// </summary>
-	public class TarHeader : ICloneable
+	public class TarHeader
 	{
 		#region Constants
 		/// <summary>
@@ -497,7 +497,7 @@ namespace ICSharpCode.SharpZipLib.Tar
 #if NETCF_1_0 || NETCF_2_0
 					string currentUser = "PocketPC";
 #else
-					string currentUser = Environment.UserName;
+                    string currentUser = "anonymous";//Environment.UserName;
 #endif
 					if (currentUser.Length > UNAMELEN) {
 						currentUser = currentUser.Substring(0, UNAMELEN);
@@ -549,7 +549,7 @@ namespace ICSharpCode.SharpZipLib.Tar
 		
 		#endregion
 
-		#region ICloneable Members
+		#region clone Members
 		/// <summary>
 		/// Create a new <see cref="TarHeader"/> that is a copy of the current instance.
 		/// </summary>
